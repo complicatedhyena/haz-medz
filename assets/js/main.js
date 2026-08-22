@@ -1,5 +1,15 @@
 // Haz Medz — interactions: scroll reveal (bounce both directions), nav, form
 
+/* ---------- Always land on the hero when the page (re)loads ---------- */
+if ('scrollRestoration' in history) {
+  history.scrollRestoration = 'manual';
+}
+if (window.location.hash) {
+  history.replaceState(null, '', window.location.pathname + window.location.search);
+}
+window.scrollTo(0, 0);
+window.addEventListener('pageshow', () => window.scrollTo(0, 0));
+
 document.getElementById('year').textContent = new Date().getFullYear();
 
 /* ---------- Scroll reveal (bounces in whichever direction you scroll) ---------- */
