@@ -1,0 +1,10 @@
+{
+  "name": "haz-medz",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Haz Medz — certified, lab-tested peptide supply across Greater Manchester.",
+  "scripts": {
+    "dev": "python -m http.server 5500",
+    "start": "python -m http.server 5500"
+  }
+}
