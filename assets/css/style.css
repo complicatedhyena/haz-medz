@@ -528,9 +528,10 @@ input:focus, textarea:focus{ border-color: var(--teal-400); background: rgba(255
   .hero-sub{ font-size: 1rem; }
   .hero-actions{ flex-direction: column; align-items: stretch; }
   .hero-actions .btn{ width: 100%; }
-  .hero-stats{ gap: .6rem; }
-  .stat{ min-width: 0; flex: 1 1 calc(50% - .6rem); padding: .85em 1em; }
-  .stat-num{ font-size: 1.25rem; }
+  .hero-stats{ gap: .6rem; flex-wrap: nowrap; }
+  .stat{ min-width: 0; flex: 1 1 0; padding: .8em .7em; }
+  .stat-num{ font-size: 1.15rem; }
+  .stat-label{ font-size: .7rem; }
 
   .marquee-track{ font-size: .7rem; gap: 1.2rem; }
 
@@ -562,6 +563,8 @@ input:focus, textarea:focus{ border-color: var(--teal-400); background: rgba(255
 }
 
 @media (max-width: 400px){
-  .hero-stats{ flex-direction: column; }
-  .stat{ flex-basis: auto; }
+  .hero-stats{ gap: .4rem; }
+  .stat{ flex: 1 1 0; min-width: 0; padding: .7em .5em; }
+  .stat-num{ font-size: 1rem; }
+  .stat-label{ font-size: .62rem; letter-spacing: .03em; }
 }
