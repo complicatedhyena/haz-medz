@@ -253,30 +253,16 @@ p{ color: var(--ink-400); line-height: 1.65; margin: 0 0 1em; }
   background: radial-gradient(circle at 30% 20%, rgba(55,201,184,.35), transparent 55%);
   pointer-events:none;
 }
-.pen-graphic{ position:relative; display:flex; justify-content:center; padding: 1.5rem 0 2.2rem; }
-.pen-body{
-  width: 74px; height: 280px; border-radius: 40px;
-  background: linear-gradient(160deg, #eef6f8, #cfe3ea 45%, #9fc0cc);
-  position:relative; box-shadow: 0 30px 50px -20px rgba(0,0,0,.6), inset 0 0 0 2px rgba(255,255,255,.4);
+.pen-graphic{
+  position:relative; display:flex; align-items:center; justify-content:center;
+  padding: 1.4rem 0 2rem;
 }
-.pen-cap{
-  position:absolute; top:-26px; left:50%; transform:translateX(-50%);
-  width:44px; height:50px; border-radius: 14px 14px 8px 8px;
-  background: linear-gradient(160deg, var(--teal-300), var(--blue-500));
+.pen-graphic svg{
+  width: 128px; height: auto;
+  filter: drop-shadow(0 20px 30px rgba(55,201,184,.25));
+  transition: transform .5s var(--ease-bounce);
 }
-.pen-window{
-  position:absolute; top:80px; left:50%; transform:translateX(-50%);
-  width:52px; height:64px; border-radius:8px;
-  background: rgba(255,255,255,.55);
-  border: 1px solid rgba(255,255,255,.7);
-  display:flex; align-items:center; justify-content:center;
-  writing-mode: vertical-rl;
-}
-.pen-window span{ font-size:.62rem; font-weight:700; color: var(--navy-800); letter-spacing:.02em; }
-.pen-label{
-  position:absolute; bottom: 26px; left:50%; transform:translateX(-50%);
-  font-size:.6rem; font-weight:800; letter-spacing:.18em; color: var(--navy-700);
-}
+.pen-card:hover .pen-graphic svg{ transform: translateY(-4px) scale(1.02); }
 .pen-card-footer{
   display:flex; justify-content:space-between; font-size:.72rem;
   color: var(--ink-400); border-top:1px solid var(--glass-border); padding-top: 1rem;
@@ -581,7 +567,7 @@ input:focus, textarea:focus{ border-color: var(--teal-400); background: rgba(255
   .stat-num{ font-size: 1.25rem; }
 
   .pen-card{ width: min(280px, 82vw); padding: 2rem 1.4rem 1.3rem; }
-  .pen-body{ width: 62px; height: 230px; }
+  .pen-graphic svg{ width: 104px; }
 
   .marquee-track{ font-size: .7rem; gap: 1.2rem; }
 
